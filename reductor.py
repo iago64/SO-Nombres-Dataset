@@ -8,7 +8,10 @@ for token in sys.stdin.readlines():
 
     if(len(token.split(',')[0]) > 0):
         word = token.split(',')[0]
-        repetitions = int(token.split(',')[1])
+        try:
+            repetitions = int(token.split(',')[1])
+        except Exception:
+            repetitions = 0
 
         if old_key is None:
              old_key = word
