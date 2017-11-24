@@ -17,10 +17,10 @@ for token in sys.stdin.readlines():
              old_key = word
 
         if old_key != word:
-            sys.stdout.write(old_key + " " + str(acumulator) + "\n")
+            sys.stdout.write(old_key + "," + str(acumulator) + "\n")
             acumulator = 0
             old_key = word
 
         acumulator += repetitions
 
-sys.stdout.write(old_key + " " + str(acumulator) + "\n")
+sys.stdout.write(old_key + "," + str(acumulator) + "\n")
